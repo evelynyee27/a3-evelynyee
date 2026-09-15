@@ -7,10 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <meta name="description" content="daily drink tracker with additional notes"
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="daily drink tracker with additional notes"
     />
 
     <script src="js/main.js"></script>
@@ -28,17 +27,17 @@
   <body>
     <button id="logout" type="button">logout</button>
     <div id="container">
-      <div class="col1">
+      <div>
         <form id="submitForm" method="POST">
-          <span>leave a new note...</span>
+          <h2>leave a new note...</h2>
           <p>
             <label for="title">title:</label>
             <input type="text" id="title" value="title" />
           </p>
 
           <p>
-            <label for="message" style>message:</label>
-            <textarea id="message"></textarea>
+            <label for="message">message:</label>
+            <textarea id="message" style="border: 1px solid black"></textarea>
           </p>
 
           <p>
@@ -60,19 +59,19 @@
       </div>
 
       <main>
-      <div class="col1">
-        <table class="table">
-          <thead>
-            <tr>
-              <th id="title">title</th>
-              <th id="message" class="wideButton">message</th>
-              <th id="drink">drink</th>
-              <th id="date" class="wideButton">date</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th id="title">title</th>
+                <th id="message">message</th>
+                <th id="drink">drink</th>
+                <th id="date">date</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </main>
     </div>
   </body>

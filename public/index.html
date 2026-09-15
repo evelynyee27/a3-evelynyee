@@ -7,10 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <meta name="description" content="daily drink tracker with additional notes"
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="daily drink tracker with additional notes"
     />
 
     <script src="js/login.js"></script>
@@ -25,25 +24,32 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   </head>
   <body>
-    <div
-      class="login"
-      style="border: 1px solid gray; border-radius: 5px; padding: 25px"
-    >
-    <main>
-      <form id="loginForm" action="/login" method="POST">
-        <span>login</span>
-        <p>
-          <label for="username">username:</label>
-          <input type="text" id="username" placeholder="username" />
-        </p>
+    <h1>daily drinks</h1>
+    <div class="login">
+      <main>
+        <div
+          id="error-message"
+          style="display: none; font-style: italic; color: gray"
+        ></div>
+        <form id="loginForm" action="/login" method="POST">
+          <h2>login</h2>
+          <p>
+            sign in with an exisiting username or password. if no username
+            exists, a new account will be created with the entered credentials.
+          </p>
 
-        <p>
-          <label for="password">password:</label>
-          <input type="password" id="password" placeholder="password" />
-        </p>
+          <p>
+            <label for="username">username:</label>
+            <input type="text" id="username" placeholder="username" />
+          </p>
 
-        <button id="login" type="submit">login</button>
-      </form>
+          <p>
+            <label for="password">password:</label>
+            <input type="password" id="password" placeholder="password" />
+          </p>
+
+          <button id="login" type="submit">login</button>
+        </form>
       </main>
     </div>
   </body>

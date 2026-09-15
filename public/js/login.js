@@ -13,7 +13,11 @@ const login = async function (event) {
   });
 
   if (response.ok) {
-    window.location.href = "/calendar.html";
+    window.location.href = "/home.html";
+  } else {
+    var errorMessage = document.getElementById("error-message");
+    errorMessage.innerHTML = "incorrect username or password, please try again";
+    errorMessage.style.display = "block";
   }
 };
 

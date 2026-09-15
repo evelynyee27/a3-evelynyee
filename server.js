@@ -8,6 +8,7 @@ const session = require("express-session");
 
 app.use(express.static("public"));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const uri = `mongodb+srv://${process.env.USER}:${process.env.PASS}@${process.env.HOST}`;
 // check for sanity
@@ -80,7 +81,6 @@ app.put("/update", async (req, res) => {
   res.json(result);
 });
 
-// login
 // if user's username does not exist, registers a new account
 app.post("/login", async (req, res) => {
   const name = req.body.username;
@@ -90,7 +90,7 @@ app.post("/login", async (req, res) => {
   if (user != null) {
     if (user.password === pass) {
       req.session.userId = user._id.toString();
-      return res.redirect("/calendar.html");
+      return res.redirect("/home.html");
     } else {
       return res.status(401).send("invalid login");
     }
@@ -113,19 +113,6 @@ app.post("/logout", (req, res) => {
 
     res.redirect("/");
   });
-});
-
-const authenticated = (req, res, next) => {
-  if (req.session.userId) {
-    next();
-  } else {
-    res.redirect("/");
-  }
-};
-
-app.get("/calendar", authenticated, (req, res) => {
-  const userId = req.session.userId;
-  res.send(userId);
 });
 
 run();
