@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- get rid of favicon error -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  </head>
+  <body>
+    <div class="login">
+      <form id="loginForm" action="/login" method="POST">
+        <span>login</span>
+        <p>
+          <label for="username">title:</label>
+          <input type="username" id="username" placeholder="username" />
+        </p>
+
+        <p>
+          <label for="password">password:</label>
+          <input type="password" id="password" placeholder="password" />
+        </p>
+
+        <button id="login" type="submit">login</button>
+      </form>
+    </div>
+  </body>
+</html>
