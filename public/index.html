@@ -2,25 +2,37 @@
 <html lang="en">
   <head>
     <title>CS4241 Assignment 2</title>
-    <meta charset="utf-8" />
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
       rel="stylesheet"
     />
 
     <script src="js/login.js"></script>
-    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tacit-css@1.9.7/dist/tacit-css.min.css"
+      integrity="sha384-D/LLHCkqHnoJ7y04sSEBX95s7wMjBn45wtHneRfp03QBgt6+a6Pz2eLUC4N1CAI0"
+      crossorigin="anonymous"
+    />
 
     <!-- get rid of favicon error -->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   </head>
   <body>
-    <div class="login">
+    <div
+      class="login"
+      style="border: 1px solid gray; border-radius: 5px; padding: 25px"
+    >
       <form id="loginForm" action="/login" method="POST">
         <span>login</span>
         <p>
-          <label for="username">title:</label>
-          <input type="username" id="username" placeholder="username" />
+          <label for="username">username:</label>
+          <input type="text" id="username" placeholder="username" />
         </p>
 
         <p>
